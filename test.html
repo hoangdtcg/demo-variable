@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    td{
+        width: 80px;
+        height: 40px;
+    }
+</style>
+<body>
+<input type="text" id="inputTxt" oninput="countTxt()">
+<button onclick="resetInput()">Reset</button>
+<p id="count">0</p>
+<script>
+    let inputTxt = document.getElementById("inputTxt");
+    let countTxt = document.getElementById("inputTxt");
+
+    function countTxt() {
+        let str = inputTxt.value.length;
+        countTxt.innerHTML = str;
+        if(str >= 10){
+            inputTxt.disabled = true;
+        }
+    }
+    function resetInput() {
+        inputTxt.value ="";
+        inputTxt.disabled = false;
+    }
+</script>
+</body>
+</html>
